@@ -36,7 +36,7 @@ class TweetController extends Controller
         $tweet = Tweet::find($id);
 
         
-        return view('index', compact('tweet'));
+        return view('show', compact('tweet'));
        // dd($tweet);
 
     }
