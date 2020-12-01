@@ -21,11 +21,12 @@
     </head>
 
 </div>
-    <form action="{{route('create')}}" method="post">
+    <form action="{{route('update')}}" method="POST">
         @csrf
+        @method('post')
         <div class="form-group">
           <label for="body">Body</label>
-          <input name="body" type="text" class="form-control" id="body" placeholder="tweet body">
+          <input name="body" value="{{ $tweet->body }}" type="text" class="form-control" id="body" placeholder="tweet body">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
