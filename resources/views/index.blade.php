@@ -33,14 +33,20 @@
               <td width="30%">
                 
               <a href="{{route('profile.id', $tweet->id )}}"  class="btn btn-primary"> Show</a>
-              <a href="{{route('profile.update', $tweet->id)}}"  class="btn btn-warning"> Edit</a>
+              <a href="{{route('update', $tweet->id)}}"  class="btn btn-warning"> Edit</a>
               <a href="{{route('profile.delete', $tweet->id)}}" class="btn btn-danger"> Delete </a>
             </td>
               </tr>
-
+              
         @endforeach
             </tbody>
           </table>
+          
+    </div>
+    <div class="container">
+      <div class="text-center mt-5" >
+        {{ $tweets->links() }}
+      </div>
     </div>
 </body>
 </html>

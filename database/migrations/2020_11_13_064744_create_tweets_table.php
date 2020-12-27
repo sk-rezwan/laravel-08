@@ -16,7 +16,7 @@ class CreateTweetsTable extends Migration
         Schema::create('tweets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->longText('body');
+            $table->string('tweet', 160);
             $table->timestamps();
         });
     }

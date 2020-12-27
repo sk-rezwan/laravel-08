@@ -9,7 +9,9 @@ class TweetController extends Controller
 {
     public function tweet(){
 
-        $tweets = Tweet::all();
+        $tweets = Tweet::paginate(5);
+
+        //dd($tweets);
 
         return view('index', compact('tweets'));
     }
@@ -50,7 +52,11 @@ class TweetController extends Controller
         return redirect()->route('index.tweet');
     }
 
-    public function editTweet(int $id, Request $request){
+    public function update(){
+        return view('edit');
+    }
+
+    public function updateTweet(int $id, Request $request){
         
         $body = $request->input('body');
 
@@ -59,7 +65,8 @@ class TweetController extends Controller
             'body'=> $body
         ]);
         //dd($request);
-        return redirect()->route('index.tweet');
+        return redirect()->back();
+
     }
     
 } 

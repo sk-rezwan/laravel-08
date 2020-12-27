@@ -24,8 +24,7 @@
                @yield('content')
 
             </div>
-
-
+\
             <div class="w-2/5 h-12">
                 <!--right menu-->
 

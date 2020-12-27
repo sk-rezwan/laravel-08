@@ -1,136 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Document</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Roboto:wght@500&display=swap");
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-$lime: #c5dc50;
-$rasp: #f36a6f;
-$seed: #383838;
-$sm: 1rem;
-$md: 2.5rem;
-$lg: 4rem;
+	<title>404 HTML Template by Colorlib</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700,900" rel="stylesheet">
 
-* {
-  box-sizing: 0;
-  margin: 0;
-  padding: 0;
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"),
-    auto;
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<style type="text/css">
+		* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(to right, white 50%, $seed 50%);
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: white;
+  padding: 0;
+  margin: 0;
 }
 
-div {
-  display: flex;
-  align-items: center;
+#notfound {
+  position: relative;
   height: 100vh;
-  max-width: 1000px;
-  width: calc(100% - #{$lg});
-  margin: 0 auto;
-  > * {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    max-width: 500px;
-    width: 100%;
-    padding: $md;
-  }
+  background: #030005;
 }
 
-aside {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/right-edges.png");
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: 25px 100%;
-  img {
-    display: block;
-    height: auto;
-    width: 100%;
-  }
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-main {
+.notfound {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
   text-align: center;
-  h1 {
-    font-family: "Fontdiner Swanky", cursive;
-    font-size: $lg;
-    color: $lime;
-    margin-bottom: $sm;
-  }
-  p {
-    margin-bottom: $md;
-    em {
-      font-style: italic;
-      color: #585858;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 180px;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50% , -50%);
+      -ms-transform: translate(-50% , -50%);
+          transform: translate(-50% , -50%);
+  font-size: 224px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -12px;
+  color: #030005;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0px #8400ff, 1px 1px 0px #ff005a;
+  letter-spacing: -20px;
+}
+
+
+.notfound .notfound-404 h2 {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 0px #8400ff;
+  letter-spacing: 13px;
+  margin: 0;
+}
+
+.notfound a {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #ff005a;
+  text-decoration: none;
+  border: 2px solid;
+  background: transparent;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  color: #8400ff;
+}
+
+@media only screen and (max-width: 767px) {
+    .notfound .notfound-404 h2 {
+        font-size: 24px;
     }
-  }
-  button {
-    font-family: "Fontdiner Swanky", cursive;
-    font-size: $sm;
-    color: $seed;
-    border: none;
-    background-color: $rasp;
-    padding: $sm $md;
-    transform: skew(-5deg);
-    transition: all 0.1s ease;
-    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-eye.png"),
-      auto;
-    &:hover {
-      background-color: $lime;
-      transform: scale(1.15);
-    }
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 h1 {
+      font-size: 182px;
   }
 }
 
-@media (max-width: 700px) {
-  body {
-    background: $seed;
-    font-size: 16px;
-  }
-  div {
-    flex-flow: column;
-    > * {
-      max-width: 700px;
-      height: 100%;
-    }
-  }
-  aside {
-    background-image: none;
-    background-color: white;
-    img {
-      max-width: 300px;
-    }
-  }
-}
+	</style>
 
-    </style>
 </head>
+
 <body>
-    <div class="container">
-        <aside><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/Mirror.png" alt="404 Image" />
-        </aside>
-        <main>
-          <h1>Sorry!</h1>
-          <p>
-            Either you aren't cool enough to visit this page or it doesn't exist <em>. . . like your social life.</em>
-          </p>
-          <button>You can go now!</button>
-        </main>
-    </div>
-</body>
+
+	<div id="notfound">
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>404</h1>
+				<h2></h2>
+			</div>
+      <h2 style="color: rgb(221, 221, 221)">
+        Either you aren't cool enough to visit this page or it doesn't exist <em>. . . like your social life.</em>
+      </h2>
+      <br>
+      <button class="btn btn-warning">You can go now!</button>
+		</div>
+	</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>

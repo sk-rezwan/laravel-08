@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,12 +21,12 @@
     </head>
 
 </div>
-    <form action="{{route('update')}}" method="POST">
+    <form action="{{route('update', $tweet->id)}}" method="post">
         @csrf
-        @method('post')
+        @method('PUT')
         <div class="form-group">
           <label for="body">Body</label>
-          <input name="body" value="{{ $tweet->body }}" type="text" class="form-control" id="body" placeholder="tweet body">
+        <input name="body" value="{{ $tweet->body }}" type="text" class="form-control" id="body" placeholder="tweet body">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
